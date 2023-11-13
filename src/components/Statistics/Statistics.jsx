@@ -3,9 +3,9 @@ import css from './Statistics.module.css'
 export const Statistics = ({ title, stats }) => {
     return (
         <section className={css.statistics}>
-            <h2 className={css.title}>{title}</h2>
+            {title && <h2 className={css.title}>{title}</h2>}
 
-            <ul className={css.stats_list}>
+            <ul className={css.stats__list}>
                 {stats.map(({ id, label, percentage }) => {
                     return (
                         <li
