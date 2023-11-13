@@ -1,19 +1,5 @@
 import './TransactionHistory.module.css';
-
-const createColor = () => {
-  const color =
-    'rgba(' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    0.2 +
-    ')';
-
-  return color;
-};
+import { createColor } from '../utils/createColor'
 
 export const TransactionHistory = ({ items }) => {
   return (

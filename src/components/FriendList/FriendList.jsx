@@ -1,4 +1,5 @@
 import css from './FriendList.module.css'
+import { FriendListItem } from './FriendListItem'
 
 export const FriendList = ({ friends }) => {
     return (
@@ -6,11 +7,12 @@ export const FriendList = ({ friends }) => {
             <ul className={css.friend__list}>
                 {friends.map(({ id, avatar, name, isOnline }) => {
                     return (
-                    <li key={id} className={css.friend__item}>
-                    <span className={`${css.friends__status} ${css[isOnline]}`}>{isOnline}</span>
-                    <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
-                    <p className={css.name}>{name}</p>
-                    </li>
+                    <FriendListItem
+                    key={id}
+                    avatar={avatar}
+                    name={name}
+                    isOnline={isOnline}
+                    />
                     )
                 })}
             </ul>
